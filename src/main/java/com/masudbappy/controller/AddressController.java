@@ -5,10 +5,12 @@ import com.masudbappy.response.AddressResponse;
 import com.masudbappy.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/address")
+@RefreshScope
 public class AddressController {
     @Autowired
     AddressService addressService;
